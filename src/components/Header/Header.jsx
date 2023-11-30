@@ -1,22 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { MdLocalMovies } from 'react-icons/md';
-import { Container, Logo, Nav } from './Header.styled';
 
+import { StyleNavLink, Container, Item, Logo, Nav } from './Header.styled';
+import { MdLocalMovies } from 'react-icons/md';
 const Header = () => {
   return (
-    <Container>
-      <Header>
+    <Nav>
+      <Container>
         <Logo>
           <MdLocalMovies size="24" />
         </Logo>
-        <Nav>
-          <NavLink to="/">Home</NavLink>
-
-          <NavLink to="/movies">Movies</NavLink>
-        </Nav>
-      </Header>
-    </Container>
+        <Item>
+          <StyleNavLink to="/">Home</StyleNavLink>
+        </Item>
+        <Item>
+          <StyleNavLink to="/movies">Movies</StyleNavLink>
+        </Item>
+      </Container>
+    </Nav>
   );
 };
 
