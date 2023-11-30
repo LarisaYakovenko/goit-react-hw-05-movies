@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const Header = styled.header`
-  background-color: red;
-`;
+export const Header = styled.header``;
 export const Container = styled.ul`
   display: flex;
   justify-content: start;
@@ -18,16 +16,12 @@ export const Logo = styled.li`
   height: 40px;
   margin-right: 15px;
   color: #fafafa;
-
-
-
-
 `;
 export const Nav = styled.div`
-
   /* color:white; */
   background-color: #b04242;
 
+  border-radius: 5px;
   color: #fafafa;
 `;
 
@@ -40,19 +34,12 @@ export const StyleNavLink = styled(NavLink)`
   cursor: pointer;
   text-decoration: none;
 
-
   &.active {
     color: #111;
     text-decoration: underline;
   }
-
-
-
-
-
 `;
 export const Item = styled.li`
   color: #fafafa;
   width: 60px;
-
-`
+`;

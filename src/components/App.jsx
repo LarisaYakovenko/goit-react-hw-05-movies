@@ -1,8 +1,8 @@
-import Home from 'pages/Home';
 import Movies from 'pages/Movies';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import MovieDetails from 'pages/MovieDetails';
+import Home from 'pages/Home/Home';
 
 // import MovieDetails from 'pages/MovieDetails';
 
