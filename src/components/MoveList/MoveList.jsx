@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import { useLocation } from 'react-router-dom';
 import { Img, Li, StylLink, P, List } from './MoveList.styled';
 
