@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdLocalMovies } from 'react-icons/md';
-import { Container, Logo, Nav } from './Hader.styled';
+import { Container, Logo, Nav } from './Header.styled';
 
 const Header = () => {
   return (
