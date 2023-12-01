@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { H1 } from './Home.styled';
 import { fetchTrending } from 'servise/serviseApi';
 import MoveList from 'components/MoveList/MoveList';
@@ -9,12 +9,12 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      // try {
-      const data = await fetchTrending();
-      setMovies([...data.results]);
-      // } catch (error) {
-      //   console.log('Error', error.message);
-      // }
+      try {
+        const data = await fetchTrending();
+        setMovies([...data.results]);
+      } catch (error) {
+        console.log('Error', error.message);
+      }
     };
     fetchData();
   }, []);

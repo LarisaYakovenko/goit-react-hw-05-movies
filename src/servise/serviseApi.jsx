@@ -4,22 +4,34 @@ const KEY = 'd7e1feefb2be86c23322f9d6c93516c8';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
 export const fetchTrending = async () => {
-  // const params = new URLSearchParams({
-  //   key: KEY,
-  // });
-
   const { data } = await axios.get(`trending/movie/day?api_key=${KEY}`);
   return data;
 };
 
-// axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
+export const fetchMovie = async movieId => {
+  const { data } = await axios.get(
+    `movie/${movieId}?api_key=${KEY}&language=en-US`
+  );
+  return data;
+};
 
-// export const fetchTrending = async () => {
-//   const res = await axios.get(`trending/movie/day?api_key=${KEY}`);
-//   return res.data;
-// };
-// // export async function fetchTrending(endPoint) {
-// //   const url = `${URL}${endPoint}?api_key=${KEY}`;
-// //   const response = await axios.get(url);
-// //   return response.data;
-// // }
+export const fetchCast = async movieId => {
+  const { data } = await axios.get(
+    `movie/${movieId}/credits?api_key=${KEY}&language=en-US`
+  );
+  return data;
+};
+
+export const fetchReviews = async movieId => {
+  const { data } = await axios.get(
+    `movie/${movieId}/reviews?api_key=${KEY}&language=en-US&page=1`
+  );
+  return data;
+};
+
+export const fetchSearchMovies = async query => {
+  const { data } = await axios.get(
+    `search/movie?api_key=${KEY}&language=en-US&page=1&include_adult=false&query=${query}`
+  );
+  return data;
+};

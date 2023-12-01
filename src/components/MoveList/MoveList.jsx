@@ -18,7 +18,8 @@ const MoveList = ({ movies }) => {
                   ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                   : defaultImg
               }
-              alt={movie.title}
+              width={250}
+              alt="poster"
             />
             <P>{movie.title}</P>
           </StylLink>
