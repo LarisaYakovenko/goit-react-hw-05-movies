@@ -17,13 +17,9 @@ const Home = () => {
       }
     };
     fetchData();
+    console.log('object :>> ', { setMovies });
   }, []);
-  // useEffect(() => {
-  //   fetchTrending().then(({ data }) => {
-  //     setMovies(data);
-  //     console.log(data);
-  //   });
-  // });
+
   return (
     <>
       <H1>Trending today</H1>
