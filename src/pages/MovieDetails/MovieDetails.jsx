@@ -17,13 +17,13 @@ const MovieDetails = () => {
 
   const { movieId } = useParams();
   const location = useLocation();
-  console.log(movieId);
+
   useEffect(() => {
     fetchMovie(movieId).then(setMoviesDetails).finally(setLoading(false));
   }, [movieId]);
 
   const defaultImg =
-    '<https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700>';
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
   const { poster_path, title, vote_average, overview, genres } = moviesDetails;
 
   return (

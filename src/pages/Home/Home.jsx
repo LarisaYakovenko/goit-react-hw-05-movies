@@ -12,7 +12,6 @@ const Home = () => {
     setLoading(true);
     fetchTrending().then(setMovies).finally(setLoading(false));
   }, []);
-  console.log(movies);
 
   return (
     <>

@@ -24,7 +24,6 @@ export const List = styled.ul`
 export const Li = styled.li`
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-
   border: none;
   background-color: #f8f1f1;
   overflow: hidden;
@@ -33,7 +32,6 @@ export const Li = styled.li`
     transform: scale(1.03);
   }
   list-style: none;
-
   margin: 0;
 `;
 
