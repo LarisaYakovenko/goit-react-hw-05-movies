@@ -10,9 +10,17 @@ export const Ul = styled.ul`
   gap: 20px;
 `;
 export const Li = styled.li`
-  :hover {
-    scale: 1.1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: none;
+  background-color: #f8f1f1;
+  overflow: hidden;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.03);
   }
+  list-style: none;
+  margin: 0;
 `;
 export const P = styled.p`
   font-size: 20px;
