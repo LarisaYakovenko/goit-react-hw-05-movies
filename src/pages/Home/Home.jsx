@@ -2,28 +2,23 @@ import { useEffect, useState } from 'react';
 import { H1 } from './Home.styled';
 import { fetchTrending } from 'servise/serviseApi';
 import MoveList from 'components/MoveList/MoveList';
-// import Header from '../components/Header/Header';
-// import { Outlet } from 'react-router-dom';
+import { Loader } from 'components/Loader/Loader';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchTrending();
-        setMovies([...data.results]);
-      } catch (error) {
-        console.log('Error', error.message);
-      }
-    };
-    fetchData();
-    console.log('object :>> ', { setMovies });
+    setLoading(true);
+    fetchTrending().then(setMovies).finally(setLoading(false));
   }, []);
+  console.log(movies);
 
   return (
     <>
       <H1>Trending today</H1>
       <MoveList movies={movies} />
+      {loading && <Loader />}
     </>
   );
 };

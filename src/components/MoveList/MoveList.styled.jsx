@@ -8,7 +8,7 @@ export const List = styled.ul`
   max-width: calc(100vw - 65px);
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 15px;
-  margin-top: 0;
+  margin-top: 50px;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
