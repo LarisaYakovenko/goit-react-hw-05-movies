@@ -22,7 +22,7 @@ const Cast = () => {
             <img
               src={
                 profile_path
-                  ? `http://image.tmdb.org/t/p/w500${profile_path}`
+                  ? `https://image.tmdb.org/t/p/w500${profile_path}`
                   : defaultImg
               }
               width={250}
