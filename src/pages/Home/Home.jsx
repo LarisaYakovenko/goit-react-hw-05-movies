@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <>
       <H1>Trending today</H1>
-      <MoveList movies={movies} />
       {loading && <Loader />}
+      <MoveList movies={movies} />
     </>
   );
 };

@@ -17,9 +17,7 @@ export const Logo = styled.li`
   color: #fafafa;
 `;
 export const Nav = styled.div`
-  /* color:white; */
   background-color: #b04242;
-
   border-radius: 5px;
   color: #fafafa;
 `;

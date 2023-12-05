@@ -25,7 +25,6 @@ export const Button = styled(Link)`
 `;
 export const Container = styled.div`
   max-width: 1200px;
-
   padding: 50px;
   height: 100vh;
 `;
